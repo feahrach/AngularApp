@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<style>
+	
+</style>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+</head>
+<html>
+
+<body ng-app="myApp" ng-controller="myControler">
+<h1 class="dbref"></h1>
+<h2>I CAN DO JS</h2>
+
+<form ng-submit="todoAdd()">
+    <input type="text" ng-model="todoInput" size="50" placeholder="Add New">
+    <input type="submit" value="Add New">
+</form>
+
+<br>
+
+<div ng-repeat="task in todoList">
+    <input type="checkbox" ng-model="task.done"> <span ng-bind="task.todoText"></span>
+</div>
+
+<form ng-controller='injectYoutube' ng-submit="checkYoutube()">
+    <input type="text" ng-model="checkYoutube" size="50" placeholder="Add New">
+    <input type="submit" value="Add New">
+</form>
+
+<p><button ng-click="remove()">Remove marked</button></p>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyBycYWZlqmf9NDeTnwk6S-JxxaCAwza0oc",
+		authDomain: "todoapp-b16aa.firebaseapp.com",
+		databaseURL: "https://todoapp-b16aa.firebaseio.com",
+		storageBucket: "todoapp-b16aa.appspot.com",
+		messagingSenderId: "572631682335"
+	};
+	
+	firebase.initializeApp(config);
+
+	var xyz = ;
+	var dbref = firebase.database().ref().child('');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8" ></script>
+</body>
+</html>
